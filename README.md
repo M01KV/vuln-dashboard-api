@@ -5,8 +5,7 @@ em uma infraestrutura) e consulta de vulnerabilidades conhecidas (**CVEs**)
 relacionadas, usando a **NVD API** (National Vulnerability Database) como serviço
 externo.
 
-Este repositório implementa a camada **API (Back-End)** do MVP, seguindo o
-**Cenário 1.1**: Interface (Front-End) + API (Back-End) + API Externa.
+Este repositório implementa a camada **API (Back-End)** do MVP: Interface (Front-End) + API (Back-End) + API Externa.
 
 > Repositório irmão: [`vuln-dashboard-front`](../vuln-dashboard-front) — a interface web que consome esta API.
 
@@ -210,14 +209,3 @@ Destaque:
 - `NVD_CACHE_TTL_SECONDS`: por quanto tempo o resultado de uma consulta à NVD
   fica em cache em memória antes de ser buscado novamente (evita repetir
   chamadas idênticas em pouco tempo).
-
-## Conformidade com os requisitos do MVP (Cenário 1.1)
-
-- [x] API REST em Python (FastAPI) com rotas **GET**, **POST**, **PUT** e **DELETE**, documentação Swagger automática em `/docs`
-- [x] Persistência com SQLite via SQLAlchemy
-- [x] README com título, descrição, instruções de instalação e diagrama de arquitetura (Mermaid)
-- [x] Dockerfile funcional na raiz do repositório
-- [x] Sem `docker-compose.yml` neste repositório (fica apenas na raiz do repositório da Interface, conforme a regra do MVP)
-- [x] Consumo de API externa pública e gratuita (NVD), sem redirecionar o usuário — dados tratados e devolvidos já prontos
-- [x] Funcionalidades extras além do CRUD básico: filtros, ordenação, paginação, cache de consultas e autenticação opcional por API Key
-- [x] snake_case em todo o código Python (PEP 8)
