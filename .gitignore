@@ -1,0 +1,21 @@
+# Ambiente virtual
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Banco de dados local (SQLite)
+*.db
+*.sqlite3
+
+# Variáveis de ambiente com segredos reais (NVD_API_KEY, WRITE_API_KEY etc.)
+.env
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
